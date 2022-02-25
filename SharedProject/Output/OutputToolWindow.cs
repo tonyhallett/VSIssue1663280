@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.Shell;
 using System.Runtime.InteropServices;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace FineCodeCoverage.Output
 {
@@ -23,6 +25,7 @@ namespace FineCodeCoverage.Output
 		/// </summary>
 		public OutputToolWindow(OutputToolWindowContext context) : base(null)
 		{
+            Content = new TextBlock { Text = "Successful instantiation of ctor with context parameter." };
 		}
 
 		/*
