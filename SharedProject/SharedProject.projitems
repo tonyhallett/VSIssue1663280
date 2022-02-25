@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9353044c-5d39-4e70-8e78-28213e05217a</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedProject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Impl\Vsix.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Output\OutputToolWindow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Output\OutputToolWindowCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Output\OutputToolWindowContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Output\OutputToolWindowPackage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Output\VSPackage.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="$(MSBuildThisFileDirectory)Resources\OutputToolWindowPackage.ico" />
+  </ItemGroup>
+</Project>
